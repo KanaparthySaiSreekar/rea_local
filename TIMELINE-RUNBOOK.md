@@ -196,6 +196,7 @@ Commands:
 | `/manifest` | package, exported components, permissions, flags |
 | `/classes <substr>` · `/methods <class\|Cls_N>` | search classes · list a class's methods |
 | `/decompile <class\|Cls_N> <method> [idx]` | REA decompiles; starts a chat about it |
+| `/decompileall [dir] [app\|all] [max]` | FULL local teardown: manifest + attack-surface JSON, every class → every method overload → one `.java` file (evidence ids in `index.json`), all `.so` from base AND container splits, automatic Il2CppDumper on `libil2cpp.so`+`global-metadata.dat`. Resumable (re-run skips existing files, Ctrl+C safe). Writes REAL names — folder is gitignored |
 | *free text* or `/ask <q>` | ask the LOCAL model about the current method — conversational, builds on prior turns (your feedback loop) |
 | `/claude [question]` | print a REDACTED block to paste into your Claude chat |
 | `/plan <directive>` | run Claude's reply locally, de-aliasing `Cls_N`→real, e.g. `/plan decompile Cls_14 onReceive`, `/plan methods Cls_9`, `/plan note <text>` |

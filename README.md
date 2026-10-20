@@ -22,7 +22,7 @@ on-device; only a redacted view is ever meant to be shared externally.
 | `redact.py` | deterministic redactor: app package + class names + string literals → `APPPKG1`/`Cls_N`/`STR_N`, plus custom `--terms` (company/project/game names) → `TERM_N` |
 | `unredact.py` | reverse of `redact.py`: expand placeholder-space advice back to real names locally |
 | `ask_local.py` | bridge: unredact an instruction, run it on the local model, re-redact the reply |
-| `re_chat.py` | interactive per-method loop (`/manifest`, `/decompile`, `/claude`) |
+| `re_chat.py` | interactive per-method loop (`/manifest`, `/decompile`, `/claude`) with a full bulk teardown command: `/decompileall [dir] [app|all] [max]` writes every class→method to one `.java` file each (REA evidence ids in `index.json`), extracts all `.so` from base + container splits, auto-runs Il2CppDumper on `libil2cpp.so` + `global-metadata.dat`, resumable, and auto-logs every action to `re-session-log.md` (local-only) |
 | `multiagent_demo.py` | sequential local planner→worker demo over one model |
 | `native_triage.py` | helper for the native (IL2CPP) lane |
 

@@ -21,6 +21,10 @@ extract/
 LOCAL-LLM-BRIEFING.md
 test_session*.json
 *.session.json
+re_session*.json
+re-session-log.md
+decompiled*/
+_re_extract/
 
 # never commit binaries / target artifacts
 *.apk
