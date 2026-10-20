@@ -1,0 +1,4 @@
+# 64k-context variant of qwen2.5-coder for Hermes Agent (needs >=64,000 ctx).
+# Build: ollama create qwen2.5-coder-re64k -f Modelfile
+FROM qwen2.5-coder:7b-instruct
+PARAMETER num_ctx 65536

@@ -1,0 +1,43 @@
+# ---------------------------------------------------------------------------
+# PRIVACY: never commit target-app data, redaction state, or generated reports.
+# This toolkit is designed so real names never leave the machine — keep it that way.
+# ---------------------------------------------------------------------------
+redaction_map*.json
+*redaction*map*.json
+terms.txt
+terms*.txt
+
+# generated analysis outputs (may contain real names)
+*-report*.md
+hybrid-report*.md
+timeline-report*.md
+findings-ledger*.json
+timeline-out/
+work/
+out/
+extract/
+
+# local operational context (target-specific, even if placeholder-space)
+LOCAL-LLM-BRIEFING.md
+test_session*.json
+*.session.json
+
+# never commit binaries / target artifacts
+*.apk
+*.apkm
+*.xapk
+*.apks
+*.so
+*.dat
+*.dll
+*.exe
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# os / editor
+.DS_Store
+Thumbs.db

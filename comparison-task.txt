@@ -1,0 +1,8 @@
+You have REA reverse-engineering tools available through an MCP server. If they are not directly listed, use the tool-search tools to find them. Target: the Android APK at /home/sreeni/re-dryrun/antennapod/antennapod-3.12.3.apk (already on disk; never run it).
+
+Do exactly these steps with the REA tools and report the results:
+1. Decode the APK's Android resources; report the package name, versionName, minSdk, targetSdk, and the number of declared permissions.
+2. Inspect the APK package; report the total class count.
+3. Decompile the method named onCreate in the class de.danoeh.antennapod.PodcastApp and include its full decompiled body.
+
+Report only facts returned by the tools. Do not guess or fabricate. End with a short bullet list of: package, versionName, minSdk, targetSdk, permission count, class count.

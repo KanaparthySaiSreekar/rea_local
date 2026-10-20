@@ -1,0 +1,27 @@
+# Staged entries to merge into Hermes's config.yaml
+# (Windows path: %LOCALAPPDATA%\hermes\config.yaml). Applied once Hermes install finishes.
+#
+# - model: local Ollama via its OpenAI-compatible endpoint (localhost, nothing leaves the machine)
+# - mcp_servers.rea: REA runs in WSL; Hermes spawns it over stdio (same pattern as Claude Code)
+# - Hermes's built-in tool_search defers REA's 207 tools so they don't flood the context window
+
+model:
+  default: "qwen2.5-coder-re64k"
+  provider: "custom"
+  base_url: "http://localhost:11434/v1"
+
+mcp_servers:
+  rea:
+    command: "wsl.exe"
+    args:
+      - "-d"
+      - "Ubuntu-22.04"
+      - "--exec"
+      - "bash"
+      - "-lc"
+      - "REA_MCP_INPUT_SCHEMA_PROFILE=compact exec rea mcp"
+    enabled: true
+
+tools:
+  tool_search:
+    enabled: "on"
